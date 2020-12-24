@@ -6,5 +6,7 @@
 
 ```
 npm i
-npm start
+npm run server
 ```
+
+要等几十秒

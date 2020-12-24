@@ -7,7 +7,7 @@ import 'amis/lib/themes/default.css';
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
 
-import { render as renderAmis } from 'amis';
+import { render as renderAmis, ToastComponent, AlertComponent } from 'amis';
 import { alert, confirm } from 'amis/lib/components/Alert';
 import { toast } from 'amis/lib/components/Toast';
 
@@ -38,7 +38,6 @@ const env = {
       if (data) {
         config.params = data;
       }
-
       return (axios as any)[method](url, config);
     } else if (data && data instanceof FormData) {
       config.headers = config.headers || {};
@@ -105,7 +104,7 @@ class AMISComponent extends React.Component<any, any> {
         type: 'page',
         body: {
           type: 'form',
-          api: '/api',
+          api: '/api/form',
           controls: [
             {
               type: 'text',
@@ -127,4 +126,17 @@ class AMISComponent extends React.Component<any, any> {
     );
   }
 }
-export default AMISComponent;
+
+class APP extends React.Component<any, any> {
+  render() {
+    return (
+      <>
+        <ToastComponent key="toast" position={'top-right'}  />
+        <AlertComponent key="alert"  />
+        <AMISComponent />
+      </>
+    )
+  }
+}
+
+export default APP;
