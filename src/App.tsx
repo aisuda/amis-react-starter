@@ -7,9 +7,9 @@ import 'amis/lib/themes/default.css';
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
 
-import { render as renderAmis, ToastComponent, AlertComponent } from 'amis';
-import { alert, confirm } from 'amis/lib/components/Alert';
-import { toast } from 'amis/lib/components/Toast';
+import {render as renderAmis, ToastComponent, AlertComponent} from 'amis';
+import {alert, confirm} from 'amis/lib/components/Alert';
+import {toast} from 'amis/lib/components/Toast';
 
 // amis 环境配置
 const env = {
@@ -20,7 +20,7 @@ const env = {
     data, // 请求数据
     responseType,
     config, // 其他配置
-    headers, // 请求头
+    headers // 请求头
   }: any) => {
     config = config || {};
     config.withCredentials = true;
@@ -59,7 +59,7 @@ const env = {
   copy: (content: string) => {
     copy(content);
     toast.success('内容已复制到粘贴板');
-  },
+  }
 
   // 后面这些接口可以不用实现
 
@@ -109,15 +109,15 @@ class AMISComponent extends React.Component<any, any> {
             {
               type: 'text',
               name: 'name',
-              label: '姓名：',
+              label: '姓名：'
             },
             {
               name: 'email',
               type: 'email',
-              label: '邮箱：',
-            },
-          ],
-        },
+              label: '邮箱：'
+            }
+          ]
+        }
       },
       {
         // props...
@@ -131,11 +131,11 @@ class APP extends React.Component<any, any> {
   render() {
     return (
       <>
-        <ToastComponent key="toast" position={'top-right'}  />
-        <AlertComponent key="alert"  />
+        <ToastComponent key="toast" position={'top-right'} />
+        <AlertComponent key="alert" />
         <AMISComponent />
       </>
-    )
+    );
   }
 }
 
