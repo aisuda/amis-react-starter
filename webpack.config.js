@@ -1,7 +1,7 @@
 const path = require('path');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -16,6 +16,14 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: 'url-loader?limit=10000'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        use: 'file-loader'
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
@@ -26,7 +34,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),

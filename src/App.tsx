@@ -4,6 +4,8 @@ import 'amis/lib/themes/default.css';
 // 或 import 'amis/lib/themes/cxd.css';
 // 或 import 'amis/lib/themes/dark.css';
 
+import 'font-awesome/css/font-awesome.css';
+
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
 
