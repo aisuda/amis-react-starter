@@ -45,6 +45,7 @@
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-react-refresh": "^2.3.8",
     "@snowpack/plugin-typescript": "^1.1.1",
+    "@vitejs/plugin-react": "^1.1.0",
     "@vue/compiler-sfc": "^3.0.4",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
@@ -59,10 +60,9 @@
     "ts-loader": "^9.2.6",
     "url-loader": "^4.1.1",
     "vite": "^2.6.14",
-    "vite-plugin-react": "^4.0.0",
     "webpack": "^5.46.0",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^4.6.0",
-    "webpack-dev-middleware": "^5.2.2"
+    "webpack-dev-middleware": "^5.2.2",
+    "webpack-dev-server": "^4.6.0"
   }
 }
