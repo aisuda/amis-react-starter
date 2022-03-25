@@ -7,7 +7,7 @@
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.11",
     "@types/react-dom": "^16.9.9",
-    "amis": "^1.6.2",
+    "amis": "^1.7.0",
     "axios": "^0.24.0",
     "copy-to-clipboard": "^3.3.1",
     "react": "^16.8.6",

@@ -108,16 +108,21 @@ class AMISComponent extends React.Component<any, any> {
         body: {
           type: 'form',
           api: '/api/form',
-          controls: [
+          body: [
             {
-              type: 'text',
+              type: 'input-text',
               name: 'name',
               label: '姓名：'
             },
             {
               name: 'email',
-              type: 'email',
+              type: 'input-email',
               label: '邮箱：'
+            },
+            {
+              type: 'editor',
+              name: 'editor',
+              label: '编辑器'
             }
           ]
         }
