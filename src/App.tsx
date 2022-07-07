@@ -1,18 +1,17 @@
 import React from 'react';
 
-import 'amis/lib/themes/default.css';
-// 或 import 'amis/lib/themes/cxd.css';
-// 或 import 'amis/lib/themes/dark.css';
-
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/css/v4-shims.css';
+
+import 'amis/lib/themes/cxd.css';
+import 'amis/lib/helper.css';
+import 'amis/sdk/iconfont.css';
 
 import axios from 'axios';
 import copy from 'copy-to-clipboard';
 
 import {render as renderAmis, ToastComponent, AlertComponent} from 'amis';
-import {alert, confirm} from 'amis/lib/components/Alert';
-import {toast} from 'amis/lib/components/Toast';
+import {alert, confirm, toast} from 'amis-ui';
 
 // amis 环境配置
 const env = {
@@ -112,12 +111,17 @@ class AMISComponent extends React.Component<any, any> {
             {
               type: 'input-text',
               name: 'name',
-              label: '姓名：'
+              label: '姓名'
             },
             {
               name: 'email',
               type: 'input-email',
-              label: '邮箱：'
+              label: '邮箱'
+            },
+            {
+              name: 'color',
+              type: 'input-color',
+              label: 'color'
             },
             {
               type: 'editor',
